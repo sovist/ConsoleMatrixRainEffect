@@ -1,5 +1,4 @@
-﻿using System;
-
+﻿
 namespace Matrix
 {
     class Program

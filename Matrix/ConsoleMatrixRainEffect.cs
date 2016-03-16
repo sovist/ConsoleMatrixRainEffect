@@ -31,6 +31,7 @@ namespace Matrix
 
         public static void Run()
         {
+            //ThreadPool.SetMinThreads(MaxTaskCount, MaxTaskCount);
             Console.CursorVisible = false;
             _isRunning = true;
             _currentTaskCount = 0;
@@ -117,7 +118,7 @@ namespace Matrix
             }
 
             lock (TaskCountSync)
-                _currentTaskCount++;
+                _currentTaskCount--;
         }
 
         public static void Stop()
